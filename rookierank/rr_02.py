@@ -1,6 +1,19 @@
 #!/bin/env python
 
 
+# problem approach
+# status is the current terrain; mountain or valley.
+# height is current elevation relative to sea level.
+# terrain count is incremented when terrain begins.
+# status is updated when terrain begins
+
+
+# step > _step_up or _step_down
+# if height before step is 0, update status
+# if height before step is -1 AND step direction is up, update status
+# if height before step is 1 and step direction is down, update status
+
+
 class Hike(dict):
     def __init__(self):
         self.height = 0
